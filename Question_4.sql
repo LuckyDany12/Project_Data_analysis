@@ -11,8 +11,10 @@ WITH trends AS (
         food_category,
         AVG(price) AS avg_price,
         AVG(avg_payroll) AS avg_payroll,
-        ((AVG(price) - LAG(AVG(price)) OVER (PARTITION BY food_category ORDER BY payroll_year)) / LAG(AVG(price)) OVER (PARTITION BY food_category ORDER BY payroll_year) * 100) AS annual_increase_price,
-        ((AVG(avg_payroll) - LAG(AVG(avg_payroll)) OVER (PARTITION BY food_category ORDER BY payroll_year)) / LAG(AVG(avg_payroll)) OVER (PARTITION BY food_category ORDER BY payroll_year) * 100) AS annual_increase_payroll
+        ((AVG(price) - LAG(AVG(price)) OVER (PARTITION BY food_category ORDER BY payroll_year)) / LAG(AVG(price)) OVER (PARTITION BY food_category ORDER BY payroll_year) * 100) 
+        	AS annual_increase_price,
+        ((AVG(avg_payroll) - LAG(AVG(avg_payroll)) OVER (PARTITION BY food_category ORDER BY payroll_year)) / LAG(AVG(avg_payroll)) OVER (PARTITION BY food_category ORDER BY payroll_year) * 100) 
+        	AS annual_increase_payroll
     FROM 
         t_daniela_horuckova_project_sql_primary_final
     GROUP BY 

@@ -1,4 +1,5 @@
--- 5. Does the level of GDP affect changes in wages and food prices? Or, if the GDP increases more significantly in one year, will this be reflected in food prices or wages in the same or the following year by a more significant increase?
+-- 5. Does the level of GDP affect changes in wages and food prices? Or, if the GDP increases more significantly in one year, 
+-- will this be reflected in food prices or wages in the same or the following year by a more significant increase?
 
 -- This SQL query selects data from two tables, t_daniela_horuckova_project_sql_primary_final and t_daniela_horuckova_project_sql_secondary_final, 
 -- focusing on the Czech Republic. It calculates the annual percentage increases in price, payroll, and GDP. 
@@ -20,9 +21,7 @@ ON
 WHERE 
     tdhpssf.country = 'Czech Republic'
 GROUP BY 
-    tdhpspf.payroll_year
-HAVING 
-    COUNT(*) > 1;
+    tdhpspf.payroll_year;
    
     
 -- Answer: The GDP level does not have a direct impact on changes in wages and food prices in the current year or the previous year. 

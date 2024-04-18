@@ -9,9 +9,9 @@
 SELECT
 	payroll_year,
 	food_category,
-	round(AVG(avg_payroll), 2) AS 'average_payrol',
-	round(avg(price), 2) AS 'average_price',
-	floor(avg(avg_payroll)/avg(price)) AS 'affordability Index',
+	round(AVG(avg_payroll), 2) AS average_payrol,
+	round(avg(price), 2) AS average_price,
+	floor(avg(avg_payroll)/avg(price)) AS affordability_index,
 	price_unit
 FROM t_daniela_horuckova_project_sql_primary_final tdhpspf
 WHERE (payroll_year = '2006' AND food_category IN ('Mléko polotučné pasterované', 'Chléb konzumní kmínový'))

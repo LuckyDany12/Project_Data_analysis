@@ -13,7 +13,8 @@ FROM (
     SELECT 
         food_category,
         payroll_year,
-        ROUND(((AVG(price) - LAG(AVG(price)) OVER (PARTITION BY food_category ORDER BY payroll_year)) / LAG(AVG(price)) OVER (PARTITION BY food_category ORDER BY payroll_year) * 100), 2) AS annual_increase_percentage
+        ROUND(((AVG(price) - LAG(AVG(price)) OVER (PARTITION BY food_category ORDER BY payroll_year)) / LAG(AVG(price)) OVER (PARTITION BY food_category ORDER BY payroll_year) * 100), 2) 
+    			AS annual_increase_percentage
     FROM t_daniela_horuckova_project_sql_primary_final
     GROUP BY food_category, payroll_year
 ) AS subquery
