@@ -17,3 +17,6 @@ FROM t_daniela_horuckova_project_sql_primary_final tdhpspf
 WHERE (payroll_year = '2006' AND food_category IN ('Mléko polotučné pasterované', 'Chléb konzumní kmínový'))
 	OR (payroll_year = '2018' AND food_category IN ('Mléko polotučné pasterované','Chléb konzumní kmínový'))
 GROUP BY payroll_year, food_category;
+
+
+-- Answer: In 2006 could be bought 1,312 kg of bread and 1,465 liters of milk and in 2018 could be bought 1,365 kg of bread and 1,669 liters of milk.

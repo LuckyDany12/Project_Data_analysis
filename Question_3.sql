@@ -19,3 +19,6 @@ FROM (
 ) AS subquery
 GROUP BY food_category
 ORDER BY average_annual_increase ASC;
+
+
+-- Answer: The price of red apples and sugar is decreasing over the years, bananas are increasing in price slowes.
