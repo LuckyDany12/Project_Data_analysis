@@ -32,5 +32,5 @@ GROUP BY
     
 
 -- Answer: No, there hasn't been a year in which the year-on-year increase in food prices exceeded wage growth by more than 10%. 
--- The largest decrease in prices compared to wages occurred between the years 2008 and 2009, with a difference of 9.65%. 
--- The largest increase in prices compared to wages occurred between the years 2012 and 2013, with a difference of 7.56%.
+-- The largest decrease in prices compared to wages occurred between 2008 and 2009, with a difference of 9.65%. 
+-- The largest increase in prices compared to wages occurred between 2012 and 2013, with a difference of 7.56%.

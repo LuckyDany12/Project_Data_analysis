@@ -25,7 +25,6 @@ HAVING
     COUNT(*) > 1;
    
     
--- Answer: The GDP level does not have a direct impact on changes in wages and food prices in the current year or in the previous year. 
--- Wages tend to increase over the long term regardless of economic development. In fact, in some weaker years, wages may even grow faster than GDP. 
--- The situation is quite similar with food. In some years of weaker GDP, food prices may increase disproportionately. For example, 
--- even though the GDP decreased compared to the previous year in 2012, food prices rise by more than 6%.
+-- Answer: The GDP level does not have a direct impact on changes in wages and food prices in the current year or the previous year. 
+-- Wages tend to increase over the long term regardless of economic development. In some weaker years, wages may even grow faster than GDP. 
+-- Similarly, in some years of weaker GDP, food prices may increase disproportionately. For example, even though the GDP decreased compared to the previous year in 2012, food prices rose by more than 6%.
