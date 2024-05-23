@@ -8,6 +8,6 @@ SELECT
 	round (e.taxes,2) AS taxes
 FROM countries c
 JOIN economies e
-	ON c.country =e.country 
+	ON c.country = e.country 
 WHERE c.continent = 'Europe' AND e.`year` BETWEEN 2006 AND 2018
 ORDER BY country, `year`;

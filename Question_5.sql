@@ -9,9 +9,9 @@
 
 SELECT
     tdhpspf.payroll_year,
-    round((AVG(price) - LAG(AVG(price)) OVER (ORDER BY payroll_year)) / LAG(AVG(price)) OVER (ORDER BY payroll_year) * 100, 2) AS annual_increase_price,
-    round((AVG(avg_payroll) - LAG(AVG(avg_payroll)) OVER (ORDER BY payroll_year)) / LAG(AVG(avg_payroll)) OVER (ORDER BY payroll_year) * 100, 2) AS annual_increase_payroll,
-    round((AVG(tdhpssf.GDP) - LAG(AVG(tdhpssf.GDP)) OVER (ORDER BY payroll_year)) / LAG(AVG(tdhpssf.GDP)) OVER (ORDER BY payroll_year) * 100, 2) AS annual_increase_HDP
+    ROUND((AVG(price) - LAG(AVG(price)) OVER (ORDER BY payroll_year)) / LAG(AVG(price)) OVER (ORDER BY payroll_year) * 100, 2) AS annual_increase_price,
+    ROUND((AVG(avg_payroll) - LAG(AVG(avg_payroll)) OVER (ORDER BY payroll_year)) / LAG(AVG(avg_payroll)) OVER (ORDER BY payroll_year) * 100, 2) AS annual_increase_payroll,
+    ROUND((AVG(tdhpssf.GDP) - LAG(AVG(tdhpssf.GDP)) OVER (ORDER BY payroll_year)) / LAG(AVG(tdhpssf.GDP)) OVER (ORDER BY payroll_year) * 100, 2) AS annual_increase_HDP
 FROM 
     t_daniela_horuckova_project_sql_primary_final tdhpspf
 JOIN 
